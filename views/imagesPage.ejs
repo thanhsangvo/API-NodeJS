@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div.scrollView {
+                margin:5px;
+                padding:5px;
+                background-color: rgb(245, 184, 253);
+                height: 500px;
+                overflow-y:scroll;
+                text-align: leading;
+                
+            }
+            
+    </style>
+
+    <title>Image Uploading</title>
+</head>
+ 
+<body>
+    <h1>Data Upload on mongoDB</h1>
+    <hr>
+    <div>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="ten"
+                       value="" name="name" required>
+            </div>
+
+            <div>
+                <label for="old">old</label>
+                <input type="text" id="old" placeholder="tuoi"
+                       value="" name="old" required>
+            </div>
+            
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+ 
+    <hr>
+    
+    <h1>Uploaded</h1>
+
+    <div class="scrollView">
+
+        <% items.forEach(function(data) { %>
+        <div>
+            <p><%= data %></p>
+        </div>
+        <% }) %>
+    </div>
+
+</body>
+ 
+</html>
